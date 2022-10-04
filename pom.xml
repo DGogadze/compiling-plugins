@@ -1,7 +1,7 @@
 #Maven
 
 <build>
-        <finalName>my-package-name</finalName>
+        <finalName>tag-name-generator</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -12,6 +12,14 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>Main</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
 
                 <executions>
@@ -25,4 +33,4 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+</build>
